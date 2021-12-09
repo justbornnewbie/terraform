@@ -8,3 +8,9 @@ resource "local_file" "cat" {
     filename = "/root/rahul/cat.txt"
     content = "We love Cats"
 }
+
+resource "random_pet" "my-pet" {
+    prefix = "Mrs"
+    separator = "."
+    length = "1"
+}
