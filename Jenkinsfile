@@ -12,6 +12,7 @@ pipeline
             
             steps{
                    sh '''
+                   ls
                    terraform init
                    terraform plan
                    terraform apply
