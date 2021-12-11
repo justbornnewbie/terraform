@@ -13,6 +13,7 @@ pipeline
             steps{
                    sh '''
                    cd aws
+                   ls
                    terraform init
                    terraform plan
                    terraform apply -auto-approve
