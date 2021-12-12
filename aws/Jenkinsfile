@@ -1,26 +1,26 @@
-pipeline
-{
-    agent
+    pipeline
     {
-        label 'control'
-    }
-
-    stages
-    {
-        stage('create-file')
+        agent
         {
-            
-            steps{
-                   sh '''
-                   cd aws
-                   ls
-                   terraform init
-                   terraform plan
-                   terraform apply -auto-approve
-                   '''
-               }
-        
+            label 'control'
         }
-        
+
+        stages
+        {
+            stage('create-file')
+            {
+                
+                steps{
+                    sh '''
+                    cd aws
+                    ls
+                    terraform init
+                    terraform plan
+                    terraform apply -auto-approve
+                    '''
+                }
+            
+            }
+            
+        }
     }
-}
